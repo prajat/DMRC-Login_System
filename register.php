@@ -71,8 +71,7 @@
 				//echo mysql_num_rows($query_run);
 				if($query_run)
 					{
-						if(mysqli_num_rows($query_run)>
-            0)
+						if(mysqli_num_rows($query_run)>0)
 						{
 							echo '
             <script type="text/javascript">
