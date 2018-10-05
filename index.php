@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	require_once('dbconfig/config.php');
-	//phpinfo();
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +15,7 @@
         <div id="main-wrapper">
             <center>
                 <h2>
-                    delhi metro rail corporation
+                    Delhi Metro Rail Corporation
                 </h2>
             </center>
             <div class="imgcontainer">
@@ -30,7 +29,7 @@
                             Username
                         </b>
                     </label>
-                    <input name="username" placeholder="Enter Username" required="" type="text">
+                    <input name="username" placeholder="Enter Your Username" required="" type="text">
                         <label>
                             <b>
                                 Password
@@ -55,9 +54,7 @@
 				@$username=$_POST['username'];
 				@$password=$_POST['password'];
 				$query = "select * from userinfotbl where username='$username' and password='$password' ";
-				//echo $query;
 				$query_run = mysqli_query($con,$query);
-				//echo mysql_num_rows($query_run);
 				if($query_run)
 				{
 					if(mysqli_num_rows($query_run)>
@@ -74,7 +71,7 @@
 					{
 						echo '
             <script type="text/javascript">
-                alert("No such User exists. Invalid Credentials")
+                alert("No such User exists. Invalid Credentials");
             </script>
             ';
 					}
@@ -83,7 +80,7 @@
 				{
 					echo '
             <script type="text/javascript">
-                alert("Database Error")
+                alert("Database Error");
             </script>
             ';
 				}
